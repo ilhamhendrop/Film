@@ -9,7 +9,15 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text("Film"),
         ),
-        body: Scrollbar(
+        body: FilmDataMobile(),
+    );
+  }
+}
+
+class FilmDataMobile extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scrollbar(
           isAlwaysShown: true,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -57,7 +65,6 @@ class HomePage extends StatelessWidget {
               }).toList(),
             ),
           ),
-        ),
-    );
+        );
   }
 }
